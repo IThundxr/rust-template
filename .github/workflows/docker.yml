@@ -23,7 +23,7 @@ jobs:
         type: [release, debug]
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Export project name
         run: echo "PROJECT_NAME=$(cargo metadata --no-deps --format-version=1 | jq -r '.packages[0].name')" >> $GITHUB_ENV
